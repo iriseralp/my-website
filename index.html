@@ -398,41 +398,40 @@
         <h3 class="contact-title padd-15">SEND ME AN E-MAIL</h3>
         <h4 class="contact-sub-title padd-15">I AM VERY RESPOSIVE TO MESSAGES</h4>
         <!--contact form-->
-        <div class="row">
-            <div class="contact-form padd-15">
-                <div class="row">
-                    <div class="form-item col-6 padd-15">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Name">
-                        </div>
-                    </div>
-                    <div class="form-item col-6 padd-15">
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
+       <form action="submit_form.php" method="post" class="contact-form">
+            <div class="row">
+                <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" name="name" required>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="form-item col-12 padd-15">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
-                        </div>
+                <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" name="email" required>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="form-item col-12 padd-15">
-                        <div class="form-group">
-                            <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                </div>  <div class="row">
-                    <div class="form-item col-12 padd-15">
-                        <button type="submit" class="btn">Send Message</button>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="row">
+                <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject" name="subject" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Message" name="message" required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-item col-12 padd-15">
+                    <button type="submit" class="btn">Send Message</button>
+                </div>
+            </div>
+        </form>
+        
 
 <!--contact section end-->
       </div>
