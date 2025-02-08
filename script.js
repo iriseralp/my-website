@@ -116,5 +116,38 @@ function updateNav(element)
             }
           });
         });
+/*---------------------------Form Validation-----------------*/
+document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    const inputs = document.querySelectorAll('input, textarea');
+    let isValid = true;
+
+    inputs.forEach(input => {
+        const error = input.nextElementSibling;
+        if (!input.checkValidity()) {
+            e.preventDefault();
+            input.style.borderColor = 'red';
+            if (!error || !error.classList.contains('error-message')) {
+                const errorMsg = document.createElement('span');
+                errorMsg.classList.add('error-message');
+                errorMsg.style.color = 'red';
+                errorMsg.style.fontSize = '14px';
+                errorMsg.style.marginTop = '5px';
+                errorMsg.style.display = 'block';
+                errorMsg.innerText = 'Lütfen bu alanı doldurunuz.';
+                input.parentNode.appendChild(errorMsg);
+            }
+            isValid = false;
+        } else {
+            input.style.borderColor = '';
+            if (error && error.classList.contains('error-message')) {
+                error.remove();
+            }
+        }
+    });
+
+    if (!isValid) {
+        e.preventDefault();
+    }
+});
 
         
